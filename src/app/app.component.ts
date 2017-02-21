@@ -11,10 +11,11 @@ import { Home } from '../pages/home/home';
 import { CampaignService } from '../services/campaign.service';
 import { ToastrService } from '../services/toastr.service';
 import { ShowdownService } from '../services/showdown.service';
+import { NpcService} from '../services/npc.service';
 
 @Component({
   templateUrl: 'app.html',
-    providers: [CampaignService, ToastrService, ShowdownService]
+    providers: [CampaignService, ToastrService, ShowdownService, NpcService]
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;

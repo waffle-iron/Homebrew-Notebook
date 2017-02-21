@@ -19,9 +19,8 @@ export class Tab1 {
     constructor(public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService,private showdownService: ShowdownService) {
         this.campaign = campaignService.getCampaign();
     }
-
+    
     onChange(newValue) {
-        console.log(newValue);
         this.campaign.markdown = newValue;  // don't forget to update the model here
         this.campaignService.setCampaign(this.campaign);
         this.campaignService.setCampaignHtml(this.showdownService.converter(this.campaign.markdown));
