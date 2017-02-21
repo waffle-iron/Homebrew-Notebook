@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, DoCheck } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { CampaignService } from '../../../services/campaign.service';
+import { ShowdownService } from '../../../services/showdown.service';
 
 @Component({
     template: `
@@ -9,13 +10,22 @@ import { CampaignService } from '../../../services/campaign.service';
       <ion-title>View</ion-title>
     </ion-navbar>
   </ion-header>
-  <ion-content>{{campaign.markdown}}</ion-content>`
+  <ion-content>
+    <div [innerHTML]="html"></div>
+  </ion-content>`
 })
 
-export class Tab2 {
+export class Tab2 implements DoCheck {
     campaign: any;
-    constructor(public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService) {
+    html:any;
+    constructor(public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService, private showdownService: ShowdownService) {
         this.campaign = campaignService.getCampaign();
+        this.html = campaignService.getCampaignHtml();
     }
 
+    ngDoCheck(){
+        if(this.html !== this.campaignService.getCampaignHtml()){
+            this.html = this.campaignService.getCampaignHtml();
+        }
+    }
 }

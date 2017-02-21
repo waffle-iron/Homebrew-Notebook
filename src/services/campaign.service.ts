@@ -7,6 +7,7 @@ import { CAMPAIGNS } from '../mock-services/mock-campaign.service'
 export class CampaignService {
 
   private currentCamp:Campaign;
+  private campHtml:string;
 
   getCampaigns(): Promise<Campaign[]> {
     return Promise.resolve(CAMPAIGNS);
@@ -20,5 +21,11 @@ export class CampaignService {
    }
    getCampaign():Campaign{
      return this.currentCamp;
+   }
+   getCampaignHtml():string{
+      return this.campHtml;
+   }
+   setCampaignHtml(html){
+     this.campHtml = html;
    }
 }
