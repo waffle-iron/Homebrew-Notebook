@@ -17,7 +17,7 @@ import { ToastrService } from '../services/toastr.service';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = Home;
 
   pages: Array<{ title: string, component: any }>;
 

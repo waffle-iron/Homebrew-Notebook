@@ -6,6 +6,9 @@ import { Page2 } from '../pages/page2/page2';
 import { Items } from '../pages/items/items';
 import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
+import { CampaigndetailsPage } from '../pages/campaigndetails/campaigndetails';
+import { Tab1 } from '../pages/campaigndetails/tabs/tab1';
+import { Tab2 } from '../pages/campaigndetails/tabs/tab2';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { Home } from '../pages/home/home';
     Page1,
     Page2,
     Items,
-    Settings
+    Settings,
+    CampaigndetailsPage,
+    Tab1,
+    Tab2
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,7 +32,10 @@ import { Home } from '../pages/home/home';
     Page1,
     Page2,
     Items,
-    Settings
+    Settings,
+    CampaigndetailsPage,
+    Tab1,
+    Tab2
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

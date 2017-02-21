@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, AlertController } from 'ionic-angular';
 import { CampaignService } from '../../services/campaign.service';
 import { Campaign } from '../../models/campaign.model';
+import { CampaigndetailsPage } from '../campaigndetails/campaigndetails'
 
 @Component({
   selector: 'page-page1',
@@ -12,7 +13,7 @@ export class Page1 implements OnInit {
   campaigns: Campaign[];
   selectedCampaign: Campaign;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService) {
+  constructor(public alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService) {
 
   }
 
@@ -24,15 +25,47 @@ export class Page1 implements OnInit {
     this.getCampaigns();
   }
 
-  delete(event, item):void{
-    for(let i in this.campaigns){
-      if (this.campaigns[i].id == item.id){
+  delete(event, item): void {
+    for (let i in this.campaigns) {
+      if (this.campaigns[i].id == item.id) {
         //delete this.campaigns[i];
-         this.campaigns.splice(+i, 1);
+        this.campaigns.splice(+i, 1);
       }
     }
   }
-  addCampaign():void{
-    
+  addCampaign(): void {
+    let prompt = this.alertCtrl.create({
+      title: 'Add Campaign',
+      message: "Enter a name for the campaign",
+      inputs: [
+        {
+          name: 'title',
+          placeholder: 'Title'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.campaignService.addCampaign(data.title);
+            console.log('Saved clicked');
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+  itemTapped(event, campaign) {
+    this.navCtrl.push(CampaigndetailsPage, {
+      campaign: campaign
+    });
   }
 }
+
+
