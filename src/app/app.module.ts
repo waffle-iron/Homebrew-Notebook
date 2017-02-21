@@ -7,6 +7,7 @@ import { Items } from '../pages/items/items';
 import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
 import { CampaignService } from '../services/campaing.service';
+import { ToastrService } from '../service/toastr.service';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,6 @@ import { CampaignService } from '../services/campaing.service';
     Items,
     Settings
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }, { provide: CampaignService }, {provide: ToastrService}]
 })
 export class AppModule { }

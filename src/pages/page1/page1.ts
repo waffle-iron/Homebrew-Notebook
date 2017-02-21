@@ -11,11 +11,11 @@ import { Campaign } from '../models/campaign.nodel';
 export class Page1 {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, markdown: string, icon:string}>;
+  items: Array<{ title: string, markdown: string, icon: string }>;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    heroes:any = CampaignService.getCampaigns();
+  constructor(public navCtrl: NavController, public navParams: NavParams, private campaignService: CampaignService) {
+
   }
 
 }
