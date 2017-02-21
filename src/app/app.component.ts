@@ -8,10 +8,11 @@ import { Items } from '../pages/items/items';
 import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
 
-import { CampaignService } from '../../services/campaing.service';
-
+import { CampaignService } from '../services/campaign.service';
+import { ToastrService } from '../services/toastr.service';
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+    providers: [CampaignService, ToastrService]
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
