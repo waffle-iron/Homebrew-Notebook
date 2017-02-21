@@ -24,4 +24,15 @@ export class Page1 implements OnInit {
     this.getCampaigns();
   }
 
+  delete(event, item):void{
+    for(let i in this.campaigns){
+      if (this.campaigns[i].id == item.id){
+        //delete this.campaigns[i];
+         this.campaigns.splice(+i, 1);
+      }
+    }
+  }
+  addCampaign():void{
+    
+  }
 }
