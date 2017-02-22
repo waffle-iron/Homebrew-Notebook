@@ -7,6 +7,8 @@ import { Page2 } from '../pages/page2/page2';
 import { Items } from '../pages/items/items';
 import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
+import { NpcdetailsPage } from '../pages/npcdetails/npcdetails';
+
 
 import { CampaignService } from '../services/campaign.service';
 import { ToastrService } from '../services/toastr.service';

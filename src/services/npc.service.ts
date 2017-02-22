@@ -10,4 +10,11 @@ export class NpcService {
         return Promise.resolve(NPCS);
     }
 
+    getBlankNpc():Npc {
+        let npc = new Npc();
+        npc.name = "None";
+
+        return npc;
+
+    }
 }

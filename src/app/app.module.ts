@@ -9,7 +9,7 @@ import { Home } from '../pages/home/home';
 import { CampaigndetailsPage } from '../pages/campaigndetails/campaigndetails';
 import { Tab1 } from '../pages/campaigndetails/tabs/tab1';
 import { Tab2 } from '../pages/campaigndetails/tabs/tab2';
-
+import { NpcdetailsPage } from '../pages/npcdetails/npcdetails'
 @NgModule({
   declarations: [
     MyApp,
@@ -20,7 +20,8 @@ import { Tab2 } from '../pages/campaigndetails/tabs/tab2';
     Settings,
     CampaigndetailsPage,
     Tab1,
-    Tab2
+    Tab2,
+    NpcdetailsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -35,7 +36,8 @@ import { Tab2 } from '../pages/campaigndetails/tabs/tab2';
     Settings,
     CampaigndetailsPage,
     Tab1,
-    Tab2
+    Tab2,
+    NpcdetailsPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

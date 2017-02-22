@@ -47,14 +47,12 @@ export class Page1 implements OnInit {
         {
           text: 'Cancel',
           handler: data => {
-            console.log('Cancel clicked');
           }
         },
         {
           text: 'Save',
           handler: data => {
             this.campaignService.addCampaign(data.title);
-            console.log('Saved clicked');
           }
         }
       ]
