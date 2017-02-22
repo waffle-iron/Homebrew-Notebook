@@ -4,7 +4,7 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-textarea [(ngModel)]="campaign.markdown"  (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
+    <ion-textarea style="z-index: 15000;height: calc(100% - 50px);" [(ngModel)]="campaign.markdown"  (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
     <ion-tabs #myTabs color="primary" preloadTabs="false">
         <ion-tab [root]="homeCtrl" tabIcon="code" tabBadgeStyle="primary"></ion-tab>
         <ion-tab [root]="homeCtrl" tabIcon="book" tabBadgeStyle="primary"></ion-tab>
