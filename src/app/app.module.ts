@@ -11,7 +11,7 @@ import { Tab1 } from '../pages/campaigndetails/tabs/tab1/tab1';
 import { Tab2 } from '../pages/campaigndetails/tabs/tab2/tab2';
 import { NpcdetailsPage } from '../pages/npcdetails/npcdetails'
 import { CircularTabs } from '../components/circular-tabs/circular-tabs';
-
+import { ModalEditor } from '../pages/campaigndetails/tabs/tab1/model-editor'
 @NgModule({
   declarations: [
     MyApp,
@@ -24,7 +24,8 @@ import { CircularTabs } from '../components/circular-tabs/circular-tabs';
     CampaigndetailsPage,
     Tab1,
     Tab2,
-    NpcdetailsPage
+    NpcdetailsPage,
+    ModalEditor
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -40,7 +41,8 @@ import { CircularTabs } from '../components/circular-tabs/circular-tabs';
     CampaigndetailsPage,
     Tab1,
     Tab2,
-    NpcdetailsPage
+    NpcdetailsPage,
+    ModalEditor
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })

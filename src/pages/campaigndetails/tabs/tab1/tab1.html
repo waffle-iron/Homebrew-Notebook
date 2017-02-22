@@ -4,17 +4,18 @@
     </ion-navbar>
 </ion-header>
 <ion-content>
-    <ion-textarea [(ngModel)]="campaign.markdown" (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
-    <ion-tabs #myTabs color="primary">
-        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="calendarCtrl" tabIcon="calendar" tabBadgeStyle="secondary"></ion-tab>
-        <ion-tab [root]="cameraCtrl" tabIcon="camera" tabBadgeStyle="dark"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
+    <ion-textarea [(ngModel)]="campaign.markdown"  (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
+    <ion-tabs #myTabs color="primary" preloadTabs="false">
+        <ion-tab [root]="homeCtrl" tabIcon="code" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="book" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="list-box" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="calendarCtrl" tabIcon="man" tabBadgeStyle="secondary"></ion-tab>
+        <ion-tab [root]="cameraCtrl" tabIcon="folder-open" tabBadgeStyle="dark"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="bug" tabBadgeStyle="primary"></ion-tab>
+
     </ion-tabs>
 
     <circular-tabs [tabRef]=" myTabs" [totalAngle]="180" [gapAngle]="2" [startAngle]="0" [closeOnTabSelection]="false" [closeOnBlur]="true"
-        [closedBtnIconName]="'arrow-up'" [openedBtnIconName]="'close'">
+        [closedBtnIconName]="'arrow-up'" [openedBtnIconName]="'close'" (tabSelected)="tabSelected($event)" >
         </circular-tabs>
 </ion-content>

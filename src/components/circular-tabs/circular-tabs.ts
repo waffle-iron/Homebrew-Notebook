@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer, ViewChild, Input, OnChanges, SimpleChanges, AfterViewInit, trigger, state, style, transition, animate } from '@angular/core';
+import { Component, ElementRef, Output, Renderer, ViewChild, Input, OnChanges, SimpleChanges, AfterViewInit, trigger, state, style, transition, animate, EventEmitter } from '@angular/core';
 import { Tabs } from 'ionic-angular';
 
 @Component({
@@ -38,6 +38,8 @@ export class CircularTabs implements OnChanges, AfterViewInit {
   @Input() openedBtnText: string = "";
   @Input() closedBtnIconName: string = "";
   @Input() openedBtnIconName: string = "";
+  @Output() tabSelected:EventEmitter<any> = new EventEmitter<any>();
+
 
   isNavOpened: boolean = false;
   positionXLock: boolean = false;
@@ -51,7 +53,7 @@ export class CircularTabs implements OnChanges, AfterViewInit {
     // if (changes['positionLock'].currentValue != changes['positionLock'].previousValue) { }
     this.styleMenu();
 
-    this.logSettings();
+    //this.logSettings();
   }
 
   ngAfterViewInit() {
@@ -96,6 +98,7 @@ export class CircularTabs implements OnChanges, AfterViewInit {
     if (this.closeOnTabSelection) {
       this.toggleNav();
     }
+    this.tabSelected.emit({index: tabIndex});
   }
 
   changeTab() {
@@ -146,7 +149,6 @@ export class CircularTabs implements OnChanges, AfterViewInit {
       if (!this.elemRef.nativeElement.contains(event.target)) {
         this.closeNav();
         // console.log(this.elemRef.nativeElement);
-
         console.log('clicked outside closing Nav...');
       }
     }

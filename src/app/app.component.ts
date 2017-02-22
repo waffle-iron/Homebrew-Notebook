@@ -9,6 +9,7 @@ import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
 import { NpcdetailsPage } from '../pages/npcdetails/npcdetails';
 
+import { ModalEditor } from '../pages/campaigndetails/tabs/tab1/model-editor'
 
 import { CampaignService } from '../services/campaign.service';
 import { ToastrService } from '../services/toastr.service';
