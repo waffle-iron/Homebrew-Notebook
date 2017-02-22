@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Editor </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-textarea [(ngModel)]="campaign.markdown" (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
+    <ion-tabs #myTabs color="primary">
+        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="calendarCtrl" tabIcon="calendar" tabBadgeStyle="secondary"></ion-tab>
+        <ion-tab [root]="cameraCtrl" tabIcon="camera" tabBadgeStyle="dark"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="homeCtrl" tabIcon="home" tabBadgeStyle="primary"></ion-tab>
+    </ion-tabs>
+
+    <circular-tabs [tabRef]=" myTabs" [totalAngle]="180" [gapAngle]="2" [startAngle]="0" [closeOnTabSelection]="false" [closeOnBlur]="true"
+        [closedBtnIconName]="'arrow-up'" [openedBtnIconName]="'close'">
+        </circular-tabs>
+</ion-content>

@@ -7,12 +7,15 @@ import { Items } from '../pages/items/items';
 import { Settings } from '../pages/settings/settings';
 import { Home } from '../pages/home/home';
 import { CampaigndetailsPage } from '../pages/campaigndetails/campaigndetails';
-import { Tab1 } from '../pages/campaigndetails/tabs/tab1';
-import { Tab2 } from '../pages/campaigndetails/tabs/tab2';
+import { Tab1 } from '../pages/campaigndetails/tabs/tab1/tab1';
+import { Tab2 } from '../pages/campaigndetails/tabs/tab2/tab2';
 import { NpcdetailsPage } from '../pages/npcdetails/npcdetails'
+import { CircularTabs } from '../components/circular-tabs/circular-tabs';
+
 @NgModule({
   declarations: [
     MyApp,
+    CircularTabs,
     Home,
     Page1,
     Page2,

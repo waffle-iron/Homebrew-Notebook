@@ -12,10 +12,16 @@
 
 </ion-header>
 
+<ion-tabs #myTabs color="primary">
+      <ion-tab tabIcon="code-working" [root]="tab1" [rootParams]="parent"></ion-tab>
+      <ion-tab tabIcon="eye" [root]="tab2" [rootParams]="parent"></ion-tab>
+</ion-tabs>
 
-<ion-content padding>
+
+
+  <ion-content padding>
     <ion-tabs>
       <ion-tab tabIcon="code-working" [root]="tab1" [rootParams]="parent"></ion-tab>
-      <ion-tab tabIcon="eye" [root]="tab2" [rootParams]="parent" ></ion-tab>
+      <ion-tab tabIcon="eye" [root]="tab2" [rootParams]="parent"></ion-tab>
     </ion-tabs>`
-</ion-content>
+  </ion-content>

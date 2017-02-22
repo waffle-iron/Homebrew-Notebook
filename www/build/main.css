@@ -21341,6 +21341,153 @@ textarea {
   font-style: normal;
 }
 
+circular-tabs {
+  position: fixed;
+  display: block;
+  bottom: 0%;
+  left: 50%;
+  margin-left: -50px;
+  height: 100px;
+  width: 100px;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+circular-tabs .menu {
+  height: 15em;
+  font-family: 'Lato', Arial, sans-serif;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /*cover to prevent extra space of anchors from being clickable*/
+}
+
+circular-tabs .menu .cn-button {
+  padding-top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 101;
+  border: none;
+  border-radius: 50%;
+  background: #387ef5;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+circular-tabs .menu .cn-button ion-icon {
+  font-size: 2em;
+}
+
+circular-tabs .menu .cn-wrapper {
+  width: 400%;
+  height: 400%;
+  top: -150%;
+  left: -150%;
+  border-radius: 50%;
+  background: transparent;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+circular-tabs .menu .cn-wrapper:after {
+  content: ".";
+  display: block;
+  font-size: 2em;
+  width: 6.2em;
+  height: 6.2em;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.1em;
+  top: 50%;
+  margin-top: -3.1em;
+  border-radius: 50%;
+  z-index: 10;
+  color: transparent;
+}
+
+circular-tabs .menu .cn-wrapper li {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 0%;
+  top: 0%;
+  overflow: hidden;
+  font-size: 1.5em;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  pointer-events: none;
+}
+
+circular-tabs .menu .cn-wrapper li a {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  display: block;
+  width: 150%;
+  height: 150%;
+  border-radius: 50%;
+  background: radial-gradient(transparent 35%, #f8f8f8 35%);
+  color: #8c8c8c;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  line-height: 2;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  pointer-events: auto;
+}
+
+circular-tabs .menu .cn-wrapper li a span {
+  position: relative;
+  top: 10px;
+  display: block;
+  font-size: 0.5em;
+  font-weight: 700;
+}
+
+circular-tabs .menu .cn-wrapper li a .selected {
+  font-size: 0.6em;
+  color: white;
+}
+
+circular-tabs .menu .cn-wrapper li a ion-icon {
+  font-size: 1em;
+}
+
+circular-tabs .menu .cn-wrapper li a ion-icon.selected {
+  font-size: 1.2em;
+  margin-top: -7px;
+}
+
+circular-tabs .menu .cn-wrapper li a ion-badge {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 70%;
+}
+
+page-tab1 circular-tabs {
+  position: fixed;
+  height: 100px;
+  width: 100px;
+  margin-left: -50px;
+  bottom: -1%;
+}
+
+page-tab1 circular-tabs .menu .cn-button {
+  border-radius: 50% 50% 0 0;
+  padding-bottom: 40px;
+}
+
 page-tab2 .phb hr + hr + blockquote {
   column-span: all;
   -webkit-column-span: all;

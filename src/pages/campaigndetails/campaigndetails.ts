@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { Tab1 } from './tabs/tab1';
-import { Tab2 } from './tabs/tab2';
+import { Tab1 } from './tabs/tab1/tab1';
+import { Tab2 } from './tabs/tab2/tab2';
 import { CampaignService } from '../../services/campaign.service';
 /*
   Generated class for the Campaigndetails page.
