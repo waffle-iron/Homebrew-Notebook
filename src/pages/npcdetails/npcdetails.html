@@ -28,6 +28,26 @@
       <ion-label>Location</ion-label>
       <ion-input type="text" [(ngModel)]="currentNPC.location" name="location"></ion-input>
     </ion-item>
+    <ion-item></ion-item>
+    <ion-item>
+      <h2 (click)="toggleGroup()">Stats</h2>
+      <div [hidden]="!shownGroup">
+        <ion-grid>
+          <ion-row center>
+            <ion-col width-16>
+              STR</ion-col>
+            <ion-col width-16>DEX</ion-col>
+            <ion-col width-16>CON</ion-col>
+            <ion-col width-16>INT</ion-col>
+            <ion-col width-16>WIS</ion-col>
+            <ion-col width-16>CHA</ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-item>
+
+
+
     <button ion-button type="submit" block>Add Todo</button>
   </form>
 
