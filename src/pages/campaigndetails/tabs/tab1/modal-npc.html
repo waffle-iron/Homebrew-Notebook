@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Players Handbook
+      Npc
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -13,27 +13,12 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list *ngFor="let npc of npcs">
     <ion-item>
-      Spell
-    </ion-item>
-    <ion-item>
-      Spell List
-    </ion-item>
-    <ion-item>
-      Class Feature
-    </ion-item>
-    <ion-item>
-      Note
-    </ion-item>
-    <ion-item>
-      Descriptive Text Box
-    </ion-item>
-    <ion-item>
-      Monster stat block
-    </ion-item>
-    <ion-item>
-      Wide Monster stat block
+      <h3>
+        {{npc.name}}
+      </h3>
+      <p>{{npc.description}}</p>
     </ion-item>
   </ion-list>
 </ion-content>

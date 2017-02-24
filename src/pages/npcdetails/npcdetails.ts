@@ -18,16 +18,10 @@ export class NpcdetailsPage {
 
   currentNPC: any;
   shownGroup = false;
-  diseases = [
-    { title: "Type 1 Diabetes", description: "Type 1 diabetes is an autoimmune disease in which the body’s immune system attacks and destroys the beta cells in the pancreas that make insulin." },
-
-  ];
 
   toggleGroup() {
     this.shownGroup =!this.shownGroup;
   };
-
-
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private npcService: NpcService) {
     this.currentNPC = navParams.get('npc');

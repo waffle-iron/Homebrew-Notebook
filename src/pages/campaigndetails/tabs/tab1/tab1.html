@@ -7,13 +7,12 @@
     <ion-textarea style="z-index: 15000;height: calc(100% - 50px);" [(ngModel)]="campaign.markdown"  (ngModelChange)="onChange($event)" rows="6" placeholder="enter long description here..."></ion-textarea>
     
     <ion-tabs #myTabs color="primary" preloadTabs="false">
-        <ion-tab [root]="homeCtrl" tabIcon="code" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="book" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="list-box" tabBadgeStyle="primary"></ion-tab>
-        <ion-tab [root]="calendarCtrl" tabIcon="man" tabBadgeStyle="secondary"></ion-tab>
-        <ion-tab [root]="cameraCtrl" tabIcon="folder-open" tabBadgeStyle="dark"></ion-tab>
-        <ion-tab [root]="homeCtrl" tabIcon="bug" tabBadgeStyle="primary"></ion-tab>
-
+        <ion-tab [root]="editCtrl" tabIcon="code" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="phbCtrl" tabIcon="book" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="tableCtrl" tabIcon="list-box" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="npcCtrl" tabIcon="man" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="itemCtrl" tabIcon="folder-open" tabBadgeStyle="primary"></ion-tab>
+        <ion-tab [root]="mosterCtrl" tabIcon="bug" tabBadgeStyle="primary"></ion-tab>
     </ion-tabs>
 
     <circular-tabs [tabRef]=" myTabs" [totalAngle]="180" [gapAngle]="2" [startAngle]="0" [closeOnTabSelection]="false" [closeOnBlur]="true"

@@ -4,6 +4,8 @@ import { CampaignService } from '../../../../services/campaign.service';
 import { ShowdownService } from '../../../../services/showdown.service';
 import { ModalEditor } from './model-editor';
 import { ModalPhb } from './modal-phb';
+import { ModalTable} from './modal-table';
+import { ModalNpc } from './modal-npc';
 
 @Component({
   templateUrl: 'tab1.html',
@@ -34,10 +36,10 @@ export class Tab1 {
         modal = this.modalCtrl.create(ModalPhb);
         break;
       case 2:
-        modal = this.modalCtrl.create(ModalPhb);
+        modal = this.modalCtrl.create(ModalTable);
         break;
       case 3:
-        modal = this.modalCtrl.create(ModalPhb);
+        modal = this.modalCtrl.create(ModalNpc);
         break;
       case 4:
         modal = this.modalCtrl.create(ModalPhb);
