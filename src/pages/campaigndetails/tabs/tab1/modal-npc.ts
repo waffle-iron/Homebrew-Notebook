@@ -2,12 +2,13 @@
 import { Component } from '@angular/core';
 
 import { ViewController } from 'ionic-angular';
-import { NpcService } from '../../../../services/npc.service'
+import {NpcService} from '../../../../services/npc.service'
 import { Npc } from '../../../../models/npc.model'
 
 @Component({
-    templateUrl: 'modal-phb.html',
-    selector: 'modal-phb'
+    providers:[NpcService],
+    templateUrl: 'modal-npc.html',
+    selector: 'modal-npc'
 })
 
 export class ModalNpc {

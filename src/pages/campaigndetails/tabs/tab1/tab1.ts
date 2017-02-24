@@ -42,16 +42,12 @@ export class Tab1 {
         modal = this.modalCtrl.create(ModalNpc);
         break;
       case 4:
-        modal = this.modalCtrl.create(ModalPhb);
+        modal = this.modalCtrl.create(ModalNpc);
         break;
       case 5:
-        modal = this.modalCtrl.create(ModalPhb);
+        modal = this.modalCtrl.create(ModalNpc);
         break;
     }
-    modal.present();
-  }
-  showEditModal() {
-    let modal = this.modalCtrl.create(ModalEditor);
     modal.present();
   }
   disabled() {
