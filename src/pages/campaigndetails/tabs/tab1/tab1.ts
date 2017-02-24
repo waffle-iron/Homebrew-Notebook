@@ -1,8 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController, NavParams, ModalController } from 'ionic-angular';
 import { CampaignService } from '../../../../services/campaign.service';
 import { ShowdownService } from '../../../../services/showdown.service';
 import { ModalEditor } from './model-editor';
+import { ModalPhb } from './modal-phb';
+
 @Component({
   templateUrl: 'tab1.html',
   selector: 'page-tab1'
@@ -23,16 +25,34 @@ export class Tab1 {
 
   tabSelected($event) {
     console.log('tab selected');
-    if ($event.index === 0) {
-      let modal = this.modalCtrl.create(ModalEditor);
-      modal.present();
+    let modal: any;
+    switch ($event.index) {
+      case 0:
+        modal = this.modalCtrl.create(ModalEditor);
+        break;
+      case 1:
+        modal = this.modalCtrl.create(ModalPhb);
+        break;
+      case 2:
+        modal = this.modalCtrl.create(ModalPhb);
+        break;
+      case 3:
+        modal = this.modalCtrl.create(ModalPhb);
+        break;
+      case 4:
+        modal = this.modalCtrl.create(ModalPhb);
+        break;
+      case 5:
+        modal = this.modalCtrl.create(ModalPhb);
+        break;
     }
+    modal.present();
   }
-  showEditModal(){
-     let modal = this.modalCtrl.create(ModalEditor);
-      modal.present();
+  showEditModal() {
+    let modal = this.modalCtrl.create(ModalEditor);
+    modal.present();
   }
-  disabled(){
+  disabled() {
     return true;
   }
 }

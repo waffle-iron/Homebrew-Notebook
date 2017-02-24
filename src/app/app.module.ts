@@ -12,6 +12,8 @@ import { Tab2 } from '../pages/campaigndetails/tabs/tab2/tab2';
 import { NpcdetailsPage } from '../pages/npcdetails/npcdetails'
 import { CircularTabs } from '../components/circular-tabs/circular-tabs';
 import { ModalEditor } from '../pages/campaigndetails/tabs/tab1/model-editor'
+import { ModalPhb } from '../pages/campaigndetails/tabs/tab1/model-phb'
+
 @NgModule({
   declarations: [
     MyApp,

@@ -111,12 +111,14 @@ export class CircularTabs implements OnChanges, AfterViewInit {
 
   closeNav() {
     this.isNavOpened = false;
+        this.renderer.setElementStyle(this.elemRef.nativeElement,'z-index', '10000');
     console.log('navclosed');
 
   }
 
   openNav() {
     this.isNavOpened = true;
+    this.renderer.setElementStyle(this.elemRef.nativeElement,'z-index', '25000');
     console.log('navopened');
 
   }
@@ -150,6 +152,8 @@ export class CircularTabs implements OnChanges, AfterViewInit {
         this.closeNav();
         // console.log(this.elemRef.nativeElement);
         console.log('clicked outside closing Nav...');
+      }else{
+
       }
     }
   }
